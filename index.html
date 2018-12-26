@@ -26,6 +26,10 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             overflow: hidden;
         }
+        a {
+            color: inherit;
+            font-weight: 600;
+        }
         h1 {
             margin: 0;
             font-weight: 200;
@@ -189,12 +193,12 @@
         
         <div class="acrylic">
             <h1>Microsoft Fluent Design Acrylic Material</h1>
-            <em>This currently only works in Chrome as it relies on the css <code>backdrop-filter</code> property.</em>
+            <p><em>This <a href="https://caniuse.com/#feat=css-backdrop-filter" target="_blank">does not work in all browsers</a> yet, as it relies on the css <code>backdrop-filter</code> property which is not yet available in Chrome or Firefox.</em></p>
             <p>This is an experiment into recreating the <em>Acrylic</em> material which can be found throughout the Windows 10 UI.
-                It involves multiple layers, including a backdrop blur, mix with a dark or light colour, then overlaying a grain texture on top.
-                With documentation found on <a href="https://docs.microsoft.com/en-us/windows/uwp/design/style/acrylic">Microsoft's Blog</a>,
-                I have recreated the effect as accurately as possible using CSS3.
-                Currently, the only browser to fully support the CSS is Chrome, but Edge is almost there as well.</p>
+                It involves multiple layers, including a backdrop blur, mix with a dark or light colour, then overlaying a grain texture on top. <a href="https://docs.microsoft.com/en-us/windows/uwp/design/style/images/acrylicrecipe_diagram.jpg">Reference</a></p>
+            <p>With documentation found on <a target="_blank" href="https://docs.microsoft.com/en-us/windows/uwp/design/style/acrylic">Microsoft's Blog</a>,
+                I have recreated the effect as accurately as possible using CSS3.</p>
+            <p>Currently, the only browser to fully support the CSS is Edge, but it is available in Chrome behind a flag. It is also available in Safari with the <code>-webkit-</code> prefix.</p>
             <p class="btn">Action Button</p>
         </div>
         <script>
