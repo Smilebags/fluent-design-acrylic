@@ -70,6 +70,7 @@
             animation-delay: 2s;
             animation-fill-mode: both;
             transition: 0.2s;
+            box-shadow:  2px 2px 8px rgba(0, 0, 0, 0.266);
             box-shadow:  2px 2px 8px #00000044;
             border: 1px solid #126a80
         }
@@ -77,6 +78,7 @@
             content: "";
             -webkit-backdrop-filter: blur(40px);
             backdrop-filter: blur(40px);
+            background-color: rgba(252, 252, 252, 0.658);
             background-color: #fcfcfca8;
             top: 0;
             left: 0;
@@ -108,6 +110,7 @@
             opacity: 1;
          }
         .acrylic.dark::before {
+            background-color: rgba(24, 24, 24, 0.658);
             background-color: #181818a8;
             
             
@@ -118,15 +121,21 @@
             bottom: var(--s4);
             right:var(--s4);
             background-blend-mode: overlay;
+            background-color: rgba(255, 255, 255, 0.266);
             background-color: #ffffff44;
+            border: 2px solid rgba(255, 255, 255, 0.266);
             border: 2px solid #ffffff44;
             padding: var(--s4);
         }
         .acrylic.dark .btn {
+            background-color: rgba(0, 0, 0, 0.266);
+            border: 2px solid rgba(136, 136, 136, 0.266);
             background-color: #00000044;
             border: 2px solid #88888844;
         }
         .acrylic .btn:hover {
+            background-color: rgba(136, 136, 136, 0.266);
+            border: 2px solid rgba(170, 170, 170, 0.266);
             background-color: #88888844;
             border: 2px solid #aaaaaa44;
         }
@@ -180,11 +189,12 @@
         
         <div class="acrylic">
             <h1>Microsoft Fluent Design Acrylic Material</h1>
-            <p>This currently only works in Chrome as it relies on the css <code>backdrop-filter</code> property.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, soluta? Nisi, quas harum! Recusandae corporis
-                soluta dolores dignissimos nobis tempore distinctio officia quasi perferendis aperiam porro dolore, hic sint
-                illo?</p>
-            <p>Aliquid error ipsam dolor consequuntur ad libero fugiat iure, corrupti mollitia. Quis quia nostrum eaque pariatur cum eos, dolorum hic maiores voluptatum, nisi debitis tempore tempora officia quidem! Magnam fuga accusantium illum, omnis in, laborum culpa commodi dignissimos voluptate recusandae pariatur, et odio labore harum nostrum earum tempore neque. Obcaecati, beatae dolores.</p>
+            <em>This currently only works in Chrome as it relies on the css <code>backdrop-filter</code> property.</em>
+            <p>This is an experiment into recreating the <em>Acrylic</em> material which can be found throughout the Windows 10 UI.
+                It involves multiple layers, including a backdrop blur, mix with a dark or light colour, then overlaying a grain texture on top.
+                With documentation found on <a href="https://docs.microsoft.com/en-us/windows/uwp/design/style/acrylic">Microsoft's Blog</a>,
+                I have recreated the effect as accurately as possible using CSS3.
+                Currently, the only browser to fully support the CSS is Chrome, but Edge is almost there as well.</p>
             <p class="btn">Action Button</p>
         </div>
         <script>
